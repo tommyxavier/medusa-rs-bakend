@@ -1,0 +1,3 @@
+# .tool-versions
+nodejs 20.19.3  # Or simply `nodejs 20` if you want the latest 20.x.x
+yarn 1.22.22
