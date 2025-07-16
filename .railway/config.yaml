@@ -1,0 +1,3 @@
+# .railway/config.yaml
+environment:
+  YARN_VERSION: "1.22.19" # Or the latest stable Yarn Classic version
