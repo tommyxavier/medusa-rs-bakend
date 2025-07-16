@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "@medusajs/admin-sdk": "2.8.7",
-    "@medusajs/cli": "2.8.7",
     "@medusajs/framework": "2.8.7",
     "@medusajs/medusa": "2.8.7",
     "@mikro-orm/core": "6.4.3",
@@ -31,9 +30,11 @@
     "@mikro-orm/migrations": "6.4.3",
     "@mikro-orm/postgresql": "6.4.3",
     "awilix": "^8.0.1",
-    "pg": "^8.13.0"
+    "pg": "^8.13.0",
+    "zod": "^3.30.0"
   },
   "devDependencies": {
+    "@medusajs/cli": "2.8.7",
     "@medusajs/test-utils": "2.8.7",
     "@mikro-orm/cli": "6.4.3",
     "@swc/core": "1.5.7",
@@ -52,7 +53,10 @@
     "yalc": "^1.0.0-pre.53"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=18"
   },
-  "packageManager": "yarn@4.9.2"
+  "packageManager": "yarn@4.9.2",
+  "resolutions": {
+    "zod": "^3.25.0"
+  }
 }
