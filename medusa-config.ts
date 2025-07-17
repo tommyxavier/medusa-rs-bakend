@@ -1,7 +1,8 @@
 import { loadEnv, defineConfig } from '@medusajs/framework/utils'
 
 loadEnv(process.env.NODE_ENV || 'development', process.cwd())
-const hola = "hola";
+const hola = "";
+const hola2 = "hola2";
 module.exports = defineConfig({
   projectConfig: {
 
