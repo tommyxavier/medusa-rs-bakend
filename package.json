@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "predeploy": "medusa db:migrate",
-    "build": "medusa build",
+    "build": "medusa build && ln -s .medusa/server/public/ public",
     "seed": "medusa exec ./src/scripts/seed.ts",
     "start": "medusa start",
     "dev": "medusa develop",
@@ -23,21 +23,18 @@
     "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit"
   },
   "dependencies": {
-    "@medusajs/admin": "^7.1.18",
-    "@medusajs/admin-sdk": "2.8.7",
-    "@medusajs/framework": "2.8.7",
-    "@medusajs/medusa": "2.8.7",
+    "@medusajs/admin-bundler": "^2.8.7",
+    "@medusajs/framework": "^2.8.7",
+    "@medusajs/medusa": "^2.8.7",
     "@mikro-orm/core": "6.4.3",
     "@mikro-orm/knex": "6.4.3",
     "@mikro-orm/migrations": "6.4.3",
     "@mikro-orm/postgresql": "6.4.3",
     "awilix": "^8.0.1",
-    "pg": "^8.13.0",
-    "zod": "^3.30.0"
+    "pg": "^8.13.0"
   },
   "devDependencies": {
-    "@medusajs/cli": "2.8.7",
-    "@medusajs/test-utils": "2.8.7",
+    "@medusajs/cli": "^2.8.7",
     "@mikro-orm/cli": "6.4.3",
     "@swc/core": "1.5.7",
     "@swc/jest": "^0.2.36",
@@ -51,7 +48,6 @@
     "react-dom": "^18.2.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2",
-    "vite": "^5.2.11",
     "yalc": "^1.0.0-pre.53"
   },
   "engines": {
@@ -59,6 +55,6 @@
   },
   "packageManager": "yarn@4.9.2",
   "resolutions": {
-    "zod": "^3.25.0"
+    "zod": "^3.22.4"
   }
 }
